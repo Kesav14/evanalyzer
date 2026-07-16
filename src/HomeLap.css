@@ -1,12 +1,9 @@
-/* =====================================
-   GOOGLE FONTS
-===================================== */
+*{
+    -webkit-tap-highlight-color: transparent;
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
 
-/* =====================================
-   RESET
-===================================== */
 
 *{
     margin:0;
@@ -24,9 +21,7 @@ body{
     font-family:"Poppins",sans-serif;
 }
 
-/* =====================================
-   HEADER
-===================================== */
+
 
 .header{
 
@@ -67,11 +62,7 @@ body{
 
 }
 
-.logo-header:hover{
 
-    transform:rotate(-6deg) scale(1.05);
-
-}
 
 .heading{
 
@@ -102,16 +93,7 @@ body{
 
 }
 
-.home-link:hover,
-.start-link:hover{
 
-    transform:translateY(-3px);
-
-    text-decoration:underline;
-
-}
-
-/* ------------------------- */
 
 .analyze-btn{
 
@@ -137,21 +119,7 @@ body{
 
 }
 
-.analyze-btn:hover{
 
-    background:white;
-
-    color:#11FCCD;
-
-    transform:translateY(-6px);
-
-    box-shadow:0 15px 25px rgba(0,0,0,.2);
-
-}
-
-/* =====================================
-   HERO
-===================================== */
 
 .hero-sec{
 
@@ -169,7 +137,7 @@ body{
 
 }
 
-/* ------------------------- */
+
 
 .hero-text{
 
@@ -179,7 +147,7 @@ body{
 
 }
 
-/* ------------------------- */
+
 
 .text-heading{
 
@@ -239,9 +207,6 @@ body{
 
 }
 
-/* =====================================
-   KEYFRAMES
-===================================== */
 
 @keyframes floatImage{
 
@@ -265,7 +230,7 @@ transform:translateY(0px);
 
 }
 
-/* ------------------------- */
+
 
 @keyframes fadeUp{
 
@@ -305,9 +270,6 @@ transform:translateY(0);
 
 }
 
-/* =====================================
-   WHY SECTION
-===================================== */
 
 .why-q{
 
@@ -327,9 +289,7 @@ transform:translateY(0);
 
 }
 
-/* =====================================
-   ARROW
-===================================== */
+
 
 .arrow-down{
 
@@ -375,13 +335,7 @@ transform:translateY(0);
 
 }
 
-.plan-smarter:hover{
 
-    transform:translateY(-10px);
-
-    box-shadow:0 20px 40px rgba(0,0,0,.25);
-
-}
 
 .plan-text{
 
@@ -395,9 +349,7 @@ transform:translateY(0);
 
 }
 
-/* =====================================
-   DETAILS CONTAINER
-===================================== */
+
 
 .details-container{
 
@@ -413,9 +365,7 @@ transform:translateY(0);
 
 }
 
-/* =====================================
-   DETAILS BOX
-===================================== */
+
 
 .details-box{
 
@@ -426,6 +376,12 @@ transform:translateY(0);
     min-height:380px;
 
     padding:30px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-start;
 
     text-align:center;
 
@@ -439,15 +395,8 @@ transform:translateY(0);
 
 }
 
-.details-box:hover{
 
-    transform:translateY(-12px);
 
-    box-shadow:0 18px 35px rgba(0,0,0,.25);
-
-}
-
-/* Fourth card */
 
 .details-box:nth-child(4){
 
@@ -455,9 +404,6 @@ transform:translateY(0);
 
 }
 
-/* =====================================
-   CARD TITLE
-===================================== */
 
 .title{
 
@@ -473,11 +419,16 @@ transform:translateY(0);
 
 }
 
-/* =====================================
-   CARD TEXT
-===================================== */
 
 .text{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
 
     font-family:"Inconsolata";
 
@@ -491,9 +442,6 @@ transform:translateY(0);
 
 }
 
-/* =====================================
-   CARD ANIMATION
-===================================== */
 
 .details-box:nth-child(1){
 
@@ -605,19 +553,8 @@ transform:translateY(10px);
 
 }
 
-.question-faq:hover{
 
-    transform:translateX(15px);
 
-    color:#2400F0;
-
-    box-shadow:0 15px 30px rgba(0,0,0,.18);
-
-}
-
-/* =====================================
-   FOR ANSWERS
-===================================== */
 
 .for{
 
@@ -633,9 +570,6 @@ transform:translateY(10px);
 
 }
 
-/* =====================================
-   CONTACT BUTTON
-===================================== */
 
 .contact{
 
@@ -667,15 +601,7 @@ transform:translateY(10px);
 
 }
 
-.contact:hover{
 
-    background:#126fbe;
-
-    transform:translateY(-8px);
-
-    box-shadow:0 15px 25px rgba(0,0,0,.25);
-
-}
 
 .contact:active{
 
@@ -683,9 +609,6 @@ transform:translateY(10px);
 
 }
 
-/* =====================================
-   FOOTER
-===================================== */
 
 .footer{
 
@@ -707,9 +630,7 @@ transform:translateY(10px);
 
 }
 
-/* =====================================
-   FOOTER LOGO
-===================================== */
+
 
 .logo-footer{
 
@@ -717,9 +638,6 @@ transform:translateY(10px);
 
 }
 
-/* =====================================
-   COPYRIGHT
-===================================== */
 
 .rights{
 
@@ -735,9 +653,6 @@ transform:translateY(10px);
 
 }
 
-/* =====================================
-   SOCIAL ICONS
-===================================== */
 
 .linkedln,
 .github{
@@ -750,12 +665,7 @@ transform:translateY(10px);
 
 }
 
-.linkedln:hover,
-.github:hover{
 
-    transform:translateY(-8px) scale(1.15);
-
-}
 
 .github{
 
@@ -763,9 +673,6 @@ transform:translateY(10px);
 
 }
 
-/* =====================================
-   SMALL FADE FOR SECTIONS
-===================================== */
 
 .hero-sec,
 .plan-smarter,
@@ -777,13 +684,7 @@ transform:translateY(10px);
 
 }
 
-/* ==========================================
-   RESPONSIVE MEDIA QUERIES
-========================================== */
 
-/* ===============================
-   1600px
-================================ */
 
 @media (max-width:1600px){
 
@@ -1302,4 +1203,51 @@ transform:translateY(10px);
   display:flex;
   align-items:center;
   gap:35px;
+}
+
+@media (hover: hover) and (pointer: fine){
+
+    .logo-header:hover{
+        transform: rotate(-6deg) scale(1.05);
+    }
+
+    .home-link:hover,
+    .start-link:hover{
+        transform: translateY(-3px);
+        text-decoration: underline;
+    }
+
+    .analyze-btn:hover{
+        background: white;
+        color: #11FCCD;
+        transform: translateY(-6px);
+        box-shadow: 0 15px 25px rgba(0,0,0,.2);
+    }
+
+    .plan-smarter:hover{
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0,0,0,.25);
+    }
+
+    .details-box:hover{
+        transform: translateY(-12px);
+        box-shadow: 0 18px 35px rgba(0,0,0,.25);
+    }
+
+    .question-faq:hover{
+        transform: translateX(15px);
+        color:#2400F0;
+        box-shadow:0 15px 30px rgba(0,0,0,.18);
+    }
+
+    .contact:hover{
+        background:#126fbe;
+        transform:translateY(-8px);
+        box-shadow:0 15px 25px rgba(0,0,0,.25);
+    }
+
+    .linkedln:hover,
+    .github:hover{
+        transform:translateY(-8px) scale(1.15);
+    }
 }
