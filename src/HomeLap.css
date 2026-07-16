@@ -1,192 +1,1305 @@
-.header{
-  width: 100%;
-  height: 152px;
-  background-color: #2400F0;
-  display: inline-flex;
-  position: sticky;
-  top: 0px;
+/* =====================================
+   GOOGLE FONTS
+===================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+/* =====================================
+   RESET
+===================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    overflow-x:hidden;
+    background:#ffffff;
+    font-family:"Poppins",sans-serif;
+}
+
+/* =====================================
+   HEADER
+===================================== */
+
+.header{
+
+    width:100%;
+    min-height:120px;
+
+    background:#2400F0;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:18px 5%;
+
+    position:sticky;
+    top:0;
+
+    z-index:999;
+
+    animation:headerDown .7s ease;
+}
+
+/* ------------------------- */
+
 .logo-heading{
-  display: inline-block;
+
+    display:flex;
+    align-items:center;
+    gap:18px;
+
 }
 
 .logo-header{
-  width: 168px;
-  margin-left: 40px;
-  top: -40px;
-  position: relative;
+
+    width:clamp(80px,8vw,160px);
+
+    transition:.35s;
+
+}
+
+.logo-header:hover{
+
+    transform:rotate(-6deg) scale(1.05);
+
 }
 
 .heading{
-  position: relative;
-  color: white;
-  font-family: 'Poppins';
-  font-size: 48px;
-  font-weight: 500;
-  top: -110px;
-  left: 157px;
+
+    color:white;
+
+    font-size:clamp(1.3rem,2vw,2.5rem);
+
+    font-weight:500;
+
+    letter-spacing:1px;
+
 }
 
-.start-link:hover,
-.home-link:hover{
-  text-decoration: underline;
-  cursor: pointer;
-}
+/* ------------------------- */
 
-.start-link,
-.home-link{
-  font-family: 'Poppins';
-  position: absolute;
-  font-weight: 300;
-  font-size: 36px;
-  margin-left: 763px;
-  margin-top: 55px;
-  color: white;
-  transition: text-decoration 0.8s;
-}
-
+.home-link,
 .start-link{
-  margin-left: 956px;
+
+    color:white;
+
+    font-size:clamp(1rem,1.6vw,2rem);
+
+    font-weight:300;
+
+    cursor:pointer;
+
+    transition:.3s;
+
 }
+
+.home-link:hover,
+.start-link:hover{
+
+    transform:translateY(-3px);
+
+    text-decoration:underline;
+
+}
+
+/* ------------------------- */
 
 .analyze-btn{
-  width: 188px;
-  height: 75px;
-  background-color: #11FCCD;
-  border-radius: 50px;
-  color: white;
-  font-family: 'Poppins';
-  font-size: 32px;
-  font-weight: 500;
-  position: relative;
-  left: 710px;
-  margin-top: 40px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  transition: background-color 0.2s,color 0.2s;
+
+    width:clamp(120px,13vw,190px);
+
+    height:clamp(48px,5vw,72px);
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#11FCCD;
+
+    color:white;
+
+    font-size:clamp(1rem,1.6vw,1.9rem);
+
+    font-weight:500;
+
+    cursor:pointer;
+
+    transition:.35s;
+
 }
 
 .analyze-btn:hover{
-  background-color: white;
-  color: #11FCCD;
-  animation: btn forwards 1 1s ease;
+
+    background:white;
+
+    color:#11FCCD;
+
+    transform:translateY(-6px);
+
+    box-shadow:0 15px 25px rgba(0,0,0,.2);
+
 }
 
-@keyframes btn{
-  from{
-    transform: translateX(0px);
-    transform: translateY(0px);
-  }
-  to{
-    transform: translateX(-20px);
-    transform: translateY(-20px);
-  }
-}
+/* =====================================
+   HERO
+===================================== */
 
 .hero-sec{
-  display: flex;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:50px;
+
+    padding:60px 7%;
+
 }
+
+/* ------------------------- */
 
 .hero-text{
-  display: inline-block;
+
+    flex:1;
+
+    animation:fadeUp 1s ease;
+
 }
+
+/* ------------------------- */
 
 .text-heading{
-  font-family: 'Inconsolata';
-  font-weight: bold;
-  font-size: 55px;
-  margin-top: 32px;
-  margin-left: 80px;
-  line-height: 128.6%;
-  text-shadow:  0 1px 0 #00A8FF ;
-  text-shadow:  0 1px 2px #2B0B0B ;
+
+    font-family:"Inconsolata";
+
+    font-size:clamp(2.3rem,5vw,4rem);
+
+    font-weight:700;
+
+    line-height:1.2;
+
+    color:#111;
+
+    margin-bottom:25px;
+
 }
+
+/* ------------------------- */
 
 .text-below{
-  width: 642px;
-  font-family: 'Inconsolata';
-  font-size: 40px;
-  font-weight: light;
-  color: #00000088;
-  margin-left: 80px;
+
+    max-width:650px;
+
+    font-family:"Inconsolata";
+
+    font-size:clamp(1.15rem,2vw,2.2rem);
+
+    color:#5c5c5c;
+
+    line-height:1.5;
+
 }
+
+/* ------------------------- */
 
 .logo-hero{
-  width: 600px;
-  margin-left: 10px;
+
+    width:min(45vw,620px);
+
+    animation:floatImage 5s ease-in-out infinite;
+
 }
+
+/* =====================================
+   SIMPLE NAV ALIGNMENT
+===================================== */
+
+.header>p{
+
+    margin-left:35px;
+
+}
+
+.header button{
+
+    margin-left:35px;
+
+}
+
+/* =====================================
+   KEYFRAMES
+===================================== */
+
+@keyframes floatImage{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-18px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+/* ------------------------- */
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(45px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ------------------------- */
+
+@keyframes headerDown{
+
+from{
+
+transform:translateY(-100%);
+
+}
+
+to{
+
+transform:translateY(0);
+
+}
+
+}
+
+/* =====================================
+   WHY SECTION
+===================================== */
 
 .why-q{
-  margin-left: 176px;
-  font-family:'Inconsolata';
-  font-size: 48px;
-  font-weight: 500;
-  margin-top: 70px;
+
+    font-family:"Inconsolata";
+
+    font-size:clamp(2rem,4vw,3.2rem);
+
+    font-weight:600;
+
+    text-align:center;
+
+    margin-top:70px;
+
+    padding:0 20px;
+
+    animation:fadeUp .8s ease;
+
 }
+
+/* =====================================
+   ARROW
+===================================== */
 
 .arrow-down{
-  width: 96px;
-  margin-left: 616px;
-  margin-top: 25px;
+
+    display:block;
+
+    width:clamp(55px,6vw,90px);
+
+    margin:30px auto;
+
+    animation:bounce 2s infinite;
+
 }
 
+/* =====================================
+   PLAN SMARTER CARD
+===================================== */
+
 .plan-smarter{
-  display: inline-block;
-  width: 740px;
-  height: 340px;
-  background-color: white;
-  box-shadow: 5px 5px 5px #00000075;
-  border-radius: 50px;
-  margin-left: 295px;
-  margin-top: 5px;
-  text-align: center;
+
+    width:min(90%,850px);
+
+    min-height:280px;
+
+    background:white;
+
+    margin:20px auto 80px;
+
+    border-radius:35px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:40px;
+
+    transition:.35s;
+
+}
+
+.plan-smarter:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+
 }
 
 .plan-text{
-  width: 660px;
-  color: black;
-  font-size: 48px;
-  font-family: 'Inconsolata';
-  font-weight: 500;
-  margin-top: 45px;
-  margin-left: 60px;
+
+    font-family:"Inconsolata";
+
+    font-size:clamp(1.6rem,3vw,3rem);
+
+    font-weight:600;
+
+    line-height:1.45;
+
 }
 
-.details-box{
-  width: 347px;
-  height: 394px;
-  background-color: white;
-  box-shadow: 5px 5px 15px black;
-  border-radius: 35px;
-  margin-top: 95px;
-  margin-left: 80px;
-  display: inline-block;
-  text-align: center;
-}
-
-.title{
-  font-family: 'Inconsolata';
-  font-size: 48px;
-  font-weight: bold;
-  color: black;
-  margin-top: 35px;
-}
+/* =====================================
+   DETAILS CONTAINER
+===================================== */
 
 .details-container{
-  display: flex;
-  flex-wrap: wrap;
+
+    width:100%;
+
+    padding:20px 5% 70px;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:40px;
+
+}
+
+/* =====================================
+   DETAILS BOX
+===================================== */
+
+.details-box{
+
+    background:white;
+
+    border-radius:30px;
+
+    min-height:380px;
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.18);
+
+    transition:.35s;
+
+    animation:fadeUp .8s ease;
+
+    cursor:pointer;
+
+}
+
+.details-box:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 18px 35px rgba(0,0,0,.25);
+
+}
+
+/* Fourth card */
+
+.details-box:nth-child(4){
+
+    text-align:left;
+
+}
+
+/* =====================================
+   CARD TITLE
+===================================== */
+
+.title{
+
+    font-family:"Inconsolata";
+
+    font-size:clamp(2rem,3vw,3rem);
+
+    font-weight:700;
+
+    margin-bottom:30px;
+
+    color:#111;
+
+}
+
+/* =====================================
+   CARD TEXT
+===================================== */
+
+.text{
+
+    font-family:"Inconsolata";
+
+    font-size:clamp(1.2rem,2vw,2rem);
+
+    font-weight:500;
+
+    line-height:1.5;
+
+    color:#444;
+
+}
+
+/* =====================================
+   CARD ANIMATION
+===================================== */
+
+.details-box:nth-child(1){
+
+    animation-delay:.1s;
+
+}
+
+.details-box:nth-child(2){
+
+    animation-delay:.2s;
+
+}
+
+.details-box:nth-child(3){
+
+    animation-delay:.3s;
+
 }
 
 .details-box:nth-child(4){
-  text-align: left;
+
+    animation-delay:.4s;
+
+}
+
+.details-box:nth-child(5){
+
+    animation-delay:.5s;
+
+}
+
+.details-box:nth-child(6){
+
+    animation-delay:.6s;
+
+}
+
+/* =====================================
+   BOUNCE ANIMATION
+===================================== */
+
+@keyframes bounce{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(10px);
+
+}
+
+}
+
+/* =====================================
+   FAQ SECTION
+===================================== */
+
+.faq{
+
+    width:100%;
+
+    text-align:center;
+
+    font-family:"Inconsolata";
+
+    font-size:clamp(2.3rem,5vw,5rem);
+
+    font-weight:400;
+
+    margin-top:80px;
+
+    margin-bottom:50px;
+
+    animation:fadeUp .8s ease;
+
+}
+
+/* =====================================
+   QUESTIONS
+===================================== */
+
+.question-faq{
+
+    width:min(90%,1100px);
+
+    margin:25px auto;
+
+    padding:25px 35px;
+
+    background:white;
+
+    border-radius:20px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+
+    font-family:"Inconsolata";
+
+    font-size:clamp(1.2rem,2.4vw,2.6rem);
+
+    font-weight:500;
+
+    transition:.35s;
+
+    cursor:pointer;
+
+}
+
+.question-faq:hover{
+
+    transform:translateX(15px);
+
+    color:#2400F0;
+
+    box-shadow:0 15px 30px rgba(0,0,0,.18);
+
+}
+
+/* =====================================
+   FOR ANSWERS
+===================================== */
+
+.for{
+
+    text-align:center;
+
+    margin-top:60px;
+
+    font-family:"Inconsolata";
+
+    font-size:clamp(1.4rem,2.5vw,2.5rem);
+
+    font-weight:400;
+
+}
+
+/* =====================================
+   CONTACT BUTTON
+===================================== */
+
+.contact{
+
+    display:block;
+
+    margin:25px auto 90px;
+
+    width:220px;
+
+    height:70px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#1993F8;
+
+    color:white;
+
+    font-family:"Poppins";
+
+    font-size:1.2rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.contact:hover{
+
+    background:#126fbe;
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 25px rgba(0,0,0,.25);
+
+}
+
+.contact:active{
+
+    transform:scale(.96);
+
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.footer{
+
+    width:100%;
+
+    background:#0936A8;
+
+    padding:30px 6%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:25px;
+
+}
+
+/* =====================================
+   FOOTER LOGO
+===================================== */
+
+.logo-footer{
+
+    width:clamp(120px,10vw,200px);
+
+}
+
+/* =====================================
+   COPYRIGHT
+===================================== */
+
+.rights{
+
+    color:white;
+
+    font-family:"Inconsolata";
+
+    font-size:clamp(1rem,2vw,2rem);
+
+    text-align:center;
+
+    flex:1;
+
+}
+
+/* =====================================
+   SOCIAL ICONS
+===================================== */
+
+.linkedln,
+.github{
+
+    width:clamp(42px,4vw,65px);
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.linkedln:hover,
+.github:hover{
+
+    transform:translateY(-8px) scale(1.15);
+
+}
+
+.github{
+
+    margin-left:18px;
+
+}
+
+/* =====================================
+   SMALL FADE FOR SECTIONS
+===================================== */
+
+.hero-sec,
+.plan-smarter,
+.details-container,
+.faq,
+.footer{
+
+    animation:fadeUp .8s ease;
+
+}
+
+/* ==========================================
+   RESPONSIVE MEDIA QUERIES
+========================================== */
+
+/* ===============================
+   1600px
+================================ */
+
+@media (max-width:1600px){
+
+.hero-sec{
+    gap:40px;
+    padding:50px 5%;
+}
+
+.details-container{
+    grid-template-columns:repeat(3,1fr);
+}
+
+.plan-smarter{
+    width:min(85%,780px);
+}
+
+}
+
+/* ===============================
+   1440px
+================================ */
+
+@media (max-width:1440px){
+
+.header{
+    padding:18px 4%;
+}
+
+.hero-sec{
+    padding:45px 4%;
+}
+
+.logo-hero{
+    width:min(42vw,520px);
+}
+
+.details-container{
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+.details-box{
+
+    min-height:350px;
+
+}
+
+}
+
+/* ===============================
+   1280px
+================================ */
+
+@media (max-width:1280px){
+
+.hero-sec{
+
+    gap:30px;
+
+}
+
+.text-heading{
+
+    max-width:550px;
+
+}
+
+.text-below{
+
+    max-width:520px;
+
+}
+
+.details-container{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.plan-smarter{
+
+    width:90%;
+
+}
+
+}
+
+/* ===============================
+   1024px
+================================ */
+
+@media (max-width:1024px){
+
+.header{
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:18px;
+
+    padding:20px;
+
+}
+
+.logo-heading{
+
+    width:100%;
+
+    justify-content:center;
+
+}
+
+.header>p{
+
+    margin-left:0;
+
+}
+
+.header button{
+
+    margin-left:0;
+
+}
+
+.hero-sec{
+
+    flex-direction:column;
+
+    text-align:center;
+
+    padding:40px 30px;
+
+}
+
+.hero-text{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.text-below{
+
+    max-width:700px;
+
+}
+
+.logo-hero{
+
+    width:min(75vw,500px);
+
+}
+
+.plan-smarter{
+
+    min-height:240px;
+
+}
+
+.details-container{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.footer{
+
+    justify-content:center;
+
+}
+
+}
+
+/* ===============================
+   TABLET LANDSCAPE
+================================ */
+
+@media (max-width:992px) and (orientation:landscape){
+
+.hero-sec{
+
+    flex-direction:row;
+
+    gap:20px;
+
+}
+
+.logo-hero{
+
+    width:45vw;
+
+}
+
+.text-heading{
+
+    font-size:2.4rem;
+
+}
+
+.text-below{
+
+    font-size:1.25rem;
+
+}
+
+}
+
+/* ===============================
+   TABLET PORTRAIT
+================================ */
+
+@media (max-width:900px){
+
+.details-container{
+
+    grid-template-columns:1fr 1fr;
+
+}
+
+.question-faq{
+
+    padding:20px;
+
+}
+
+.plan-smarter{
+
+    padding:30px;
+
+}
+
+}
+
+/* ===============================
+   768px
+================================ */
+
+@media (max-width:768px){
+
+.header{
+
+    min-height:auto;
+
+}
+
+.heading{
+
+    text-align:center;
+
+}
+
+.hero-sec{
+
+    padding:35px 20px;
+
+}
+
+.logo-hero{
+
+    width:85%;
+
+}
+
+.details-container{
+
+    grid-template-columns:1fr;
+
+}
+
+.details-box{
+
+    max-width:500px;
+
+    width:100%;
+
+    margin:auto;
+
+}
+
+.question-faq{
+
+    width:95%;
+
+}
+
+.footer{
+
+    flex-direction:column;
+
+}
+
+.github{
+
+    margin-left:12px;
+
+}
+
+}
+
+/* ===============================
+   MOBILE LANDSCAPE
+================================ */
+
+@media (max-width:768px) and (orientation:landscape){
+
+.hero-sec{
+
+    flex-direction:row;
+
+}
+
+.logo-hero{
+
+    width:42vw;
+
+}
+
+.text-heading{
+
+    font-size:2rem;
+
+}
+
+.text-below{
+
+    font-size:1.1rem;
+
+}
+
+}
+
+/* ===============================
+   600px
+================================ */
+
+@media (max-width:600px){
+
+.header{
+
+    padding:15px;
+
+}
+
+.logo-heading{
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+.hero-sec{
+
+    padding:25px 15px;
+
+}
+
+.plan-smarter{
+
+    padding:20px;
+
+    border-radius:25px;
+
+}
+
+.details-box{
+
+    padding:25px;
+
+}
+
+.contact{
+
+    width:190px;
+
+    height:60px;
+
+}
+
+}
+
+/* ===============================
+   500px
+================================ */
+
+@media (max-width:500px){
+
+.header{
+
+    gap:12px;
+
+}
+
+.logo-header{
+
+    width:85px;
+
+}
+
+.heading{
+
+    font-size:1.15rem;
+
+}
+
+.home-link,
+
+.start-link{
+
+    font-size:.95rem;
+
+}
+
+.analyze-btn{
+
+    width:130px;
+
+    height:45px;
+
+    font-size:.95rem;
+
+}
+
+.text-heading{
+
+    font-size:2rem;
+
+}
+
+.text-below{
+
+    font-size:1rem;
+
+}
+
+.plan-text{
+
+    font-size:1.35rem;
+
+}
+
+.title{
+
+    font-size:1.7rem;
+
 }
 
 .text{
-  font-family: 'Inconsolata';
-  font-size: 32px;
-  text-align: center;
-  font-weight: 500;
-  margin-top: 52px;
+
+    font-size:1rem;
+
+}
+
+.question-faq{
+
+    font-size:1.05rem;
+
+    padding:18px;
+
+}
+
+.footer{
+
+    padding:20px 10px;
+
+}
+
+.rights{
+
+    line-height:1.5;
+
+}
+
+}
+
+/* ===============================
+   EXTRA SMALL DEVICES
+================================ */
+
+@media (max-width:360px){
+
+.heading{
+
+    font-size:1rem;
+
+}
+
+.text-heading{
+
+    font-size:1.8rem;
+
+}
+
+.plan-text{
+
+    font-size:1.2rem;
+
+}
+
+.contact{
+
+    width:170px;
+
+}
+
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:35px;
 }

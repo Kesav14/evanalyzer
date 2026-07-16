@@ -35,6 +35,17 @@ function HomeLap(){
     }
   ]
 
+  const questions = [
+    '1) How is the driving range calculated ?',
+    "2) Why is the estimated range different from the manufacturer's claim ?",
+    "3) Does weather affect EV range ?",
+    "4) What factors have the biggest impact on EV range ?"
+  ]
+
+  const mquestions = questions.map((question)=>(
+    <p className="question-faq" >{question}</p>
+  ))
+
   const mreasons = reasons.map((reason)=>({
     id:reason.id,
     title:reason.title,
@@ -48,10 +59,12 @@ function HomeLap(){
           <img src="/logo-car.png" alt="" className="logo-header" />
           <p className="heading">EV TRIP ANALYZER</p>
         </div>
-
-        <p className="home-link">Home</p>
-        <p className="start-link">Start</p>
-        <button className='analyze-btn' >Analyze</button>
+        <div className="nav-links">
+          <p className="home-link">Home</p>
+          <p className="start-link">Start</p>
+          <button className='analyze-btn' >Analyze</button>
+        </div>
+        
 
       </div>
 
@@ -76,7 +89,20 @@ function HomeLap(){
       </div>
       ))}
       </div>
-      
+
+      <p className="faq">Frequently Asked Questions</p>
+      {mquestions}
+
+      <p className="for">For answers</p>
+
+      <button className="contact">Contact Us</button>
+
+      <div className="footer">
+        <img src="/logo-car.png" alt="" className="logo-footer" />
+        <p className="rights">All Rights Reserved By Owner</p>
+        <img src="/linkedin_files/linkedin-original.svg" alt="" className="linkedln" />
+        <img src="/github.svg" alt="" className="github" />
+      </div>
     </>
   )
 }
