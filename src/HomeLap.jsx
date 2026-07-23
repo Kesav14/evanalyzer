@@ -100,7 +100,7 @@ function HomeLap(){
       <div className="footer">
         <img src="/logo-car.png" alt="" className="logo-footer" />
         <p className="rights">All Rights Reserved By Owner</p>
-        <img src="/linkedin_files/linkedin-original.svg" alt="" className="linkedln" />
+        <img src="/linkedin-original.svg" alt="" className="linkedln" />
         <img src="/github.svg" alt="" className="github" />
       </div>
     </>
